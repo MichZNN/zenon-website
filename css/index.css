@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 20vw;
+    transform: scaleY(0.7);
+    font-weight: bold;
+    color: #6FF34D;
+    line-height: 0.71;
+}
+.N {
+    font-size: 20.5vw;
+    position: relative;
+    left: -0.02vw;
+}
+
+.navbar-custom {
+    background-color: #6FF34D;
+}
