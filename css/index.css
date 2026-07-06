@@ -13,7 +13,7 @@ body.homepage {
 }
 
 .logo-wrap {
-    width: clamp(220px, 48vmin, 680px);
+    width: clamp(210px, calc(48vmin - 10px), 670px);
     margin: 0 auto;
     filter: drop-shadow(0 0 24px rgba(111, 243, 77, 0.26));
 }
@@ -27,7 +27,7 @@ body.homepage {
 .homepage-kicker {
     margin: 0.35rem 0 0;
     color: rgba(255, 255, 255, 0.72);
-    font-size: clamp(1rem, 2.8vmin, 1.75rem);
+    font-size: clamp(1.15rem, 3.5vmin, 2.2rem);
     font-weight: 500;
     letter-spacing: 0;
     text-transform: uppercase;
@@ -46,6 +46,6 @@ body.homepage {
     }
 
     .logo-wrap {
-        width: min(86vw, 420px);
+        width: min(84vw, 410px);
     }
 }

@@ -65,7 +65,7 @@ require_once("wznn_data.php");
         </li>
 
         <li class="nav-item">
-          <span class="nav-link text-body-secondary" style="font-size: 0.875rem;">
+          <span class="nav-link navbar-price">
           <?php
           if(isset($cache)) {
             echo "ZNN &dollar;" . $cache['wznn_weth']['data']['priceUsd'] . "&nbsp;";

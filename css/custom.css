@@ -159,6 +159,10 @@ header.custom-header {
     color: #000;
 }
 
+.navbar-custom .navbar-nav {
+    gap: 0.45rem;
+}
+
 .navbar-custom .navbar-toggler {
     border: 0;
     color: #000;
@@ -179,7 +183,7 @@ header.custom-header {
     transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
 }
 
-.navbar-custom .nav-link:not(.dropdown-toggle)::after {
+.navbar-custom .nav-link:not(.dropdown-toggle):not(.navbar-price)::after {
     content: "";
     position: absolute;
     left: 0.85rem;
@@ -192,23 +196,26 @@ header.custom-header {
     transition: transform 180ms ease;
 }
 
-.navbar-custom .nav-link:hover,
-.navbar-custom .nav-link:focus {
+.navbar-custom .nav-link:not(.navbar-price):hover,
+.navbar-custom .nav-link:not(.navbar-price):focus {
     background-color: rgba(0, 0, 0, 0.08);
     color: #000;
     transform: translateY(-1px);
 }
 
-.navbar-custom .nav-link:not(.dropdown-toggle):hover::after,
-.navbar-custom .nav-link:not(.dropdown-toggle):focus::after {
+.navbar-custom .nav-link:not(.dropdown-toggle):not(.navbar-price):hover::after,
+.navbar-custom .nav-link:not(.dropdown-toggle):not(.navbar-price):focus::after {
     transform: scaleX(1);
 }
 
-.navbar-custom .price-value {
+.navbar-custom .navbar-price {
+    color: rgba(0, 0, 0, 0.68);
+    cursor: default;
+    font-size: 0.875rem;
     white-space: nowrap;
 }
 
-.navbar-custom .price-value::after {
+.navbar-custom .navbar-price::after {
     display: none;
 }
 
