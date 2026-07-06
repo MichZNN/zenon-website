@@ -7,32 +7,21 @@ body.homepage {
 .homepage-hero {
     display: grid;
     min-height: 100vh;
-    padding: 5rem 0 2rem;
+    padding: 4.5rem 0 2rem;
     place-items: center;
     text-align: center;
 }
 
 .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    font-size: 20vw;
-    font-weight: bold;
-    color: #6FF34D;
-    line-height: 0.71;
-    transform: scaleY(0.7);
-    text-shadow: 0 0 24px rgba(111, 243, 77, 0.28);
-}
-
-.N {
-    font-size: 20.5vw;
-    position: relative;
-    left: -0.02vw;
+    display: block;
+    width: min(58vw, 440px);
+    height: auto;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 24px rgba(111, 243, 77, 0.26));
 }
 
 .homepage-kicker {
-    margin: -2rem 0 0;
+    margin: 0.65rem 0 0;
     color: rgba(255, 255, 255, 0.72);
     font-size: clamp(0.85rem, 2.8vw, 1.1rem);
     font-weight: 500;
@@ -49,10 +38,10 @@ body.homepage {
 @media (max-width: 575.98px) {
     .homepage-hero {
         align-items: center;
-        padding-top: 5.5rem;
+        padding-top: 5rem;
     }
 
-    .homepage-kicker {
-        margin-top: -1.4rem;
+    .logo {
+        width: min(78vw, 320px);
     }
 }

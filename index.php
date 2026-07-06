@@ -18,7 +18,7 @@ require_once("wznn_data.php");
 
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.php">Zenon Tools</a>
+    <a class="navbar-brand" href="index.php" aria-label="Home"></a>
 
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
@@ -30,7 +30,7 @@ require_once("wznn_data.php");
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-lg-auto align-items-lg-center">
+      <ul class="navbar-nav">
 
         <li class="nav-item">
           <a class="nav-link" href="https://zenon.network/">Zenon Network</a>
@@ -73,10 +73,7 @@ require_once("wznn_data.php");
 
     <main class="homepage-hero">
         <div class="container">
-            <div class="logo" aria-label="Zenon Network logo">
-                <div>Z</div>
-                <div class="N">N</div>
-            </div>
+            <img class="logo" src="img/zenon.png" alt="Zenon Network logo">
             <p class="homepage-kicker">Network of Momentum</p>
         </div>
     </main>

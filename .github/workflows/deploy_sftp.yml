@@ -38,6 +38,9 @@ jobs:
             -iname '*.ico' -o \
             -iname '*.webp' -o \
             -iname '*.otf' -o \
+            -iname '*.ttf' -o \
+            -iname '*.woff' -o \
+            -iname '*.woff2' -o \
             -iname '*.webmanifest' \
           \) -print0 | rsync -av --from0 --files-from=- ./ "$DEPLOY_DIR/"
 

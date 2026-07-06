@@ -142,6 +142,7 @@ header.custom-header {
     color: #000;
     font-weight: 600;
     letter-spacing: 0;
+    min-width: 0;
 }
 
 .navbar-custom .navbar-brand:hover,
@@ -203,17 +204,38 @@ header.custom-header {
 }
 
 .navbar-custom .dropdown-item {
+    position: relative;
     color: #000;
     border-radius: 0.35rem;
     font-weight: 500;
     transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
+
+.navbar-custom .dropdown-item::after {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.28rem;
+    height: 2px;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 160ms ease;
+}
+
 .navbar-custom .dropdown-item:hover,
 .navbar-custom .dropdown-item:focus,
 .navbar-custom .dropdown-item.active {
     background-color: rgba(0, 0, 0, 0.12);
     color: #000;
     transform: translateX(0.18rem);
+}
+
+.navbar-custom .dropdown-item:hover::after,
+.navbar-custom .dropdown-item:focus::after,
+.navbar-custom .dropdown-item.active::after {
+    transform: scaleX(1);
 }
 
 .tool-header-inner {
