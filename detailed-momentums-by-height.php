@@ -81,7 +81,6 @@ if (!empty($_GET['height'])) {
   <div class="container tool-header-inner">
     <a class="btn home-btn" href="index.php" aria-label="Home">
       <i class="fa-solid fa-house"></i>
-      <span>Home</span>
     </a>
     <form method="GET" class="tool-search-form" id="searchForm">
       <input type="search" name="height" class="form-control custom-input" placeholder="Height" aria-label="Search" value="<?php echo isset($_GET['height']) ? htmlspecialchars($_GET['height']) : ''; ?>">

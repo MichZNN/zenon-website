@@ -102,7 +102,6 @@ if (isset($data_array['data']['list']) && is_array($data_array['data']['list']))
   <div class="container tool-header-inner">
     <a class="btn home-btn" href="index.php" aria-label="Home">
       <i class="fa-solid fa-house"></i>
-      <span>Home</span>
     </a>
   </div>
 </header>

@@ -145,6 +145,15 @@ header.custom-header {
     min-width: 0;
 }
 
+.navbar-custom {
+    min-height: 4.25rem;
+    --bs-navbar-padding-y: 0;
+}
+
+.navbar-custom > .container {
+    min-height: 4.25rem;
+}
+
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus {
     color: #000;
@@ -166,6 +175,7 @@ header.custom-header {
     font-weight: 500;
     border-radius: 0.35rem;
     padding-inline: 0.85rem;
+    padding-block: 0.75rem;
     transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
 }
 
@@ -192,6 +202,14 @@ header.custom-header {
 .navbar-custom .nav-link:not(.dropdown-toggle):hover::after,
 .navbar-custom .nav-link:not(.dropdown-toggle):focus::after {
     transform: scaleX(1);
+}
+
+.navbar-custom .price-value {
+    white-space: nowrap;
+}
+
+.navbar-custom .price-value::after {
+    display: none;
 }
 
 .navbar-custom .dropdown-menu {
@@ -258,12 +276,13 @@ header.custom-header {
 .home-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
+    justify-content: center;
     flex: 0 0 auto;
     background-color: #151515;
     color: #fff;
     border: 0;
     font-weight: 600;
+    width: 2.75rem;
     min-height: 2.375rem;
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -288,11 +307,6 @@ a:focus {
     .tool-header-inner {
         align-items: stretch;
         flex-direction: column;
-    }
-
-    .home-btn {
-        justify-content: center;
-        width: 100%;
     }
 
     .tool-search-form {

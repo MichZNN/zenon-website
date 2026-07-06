@@ -29,8 +29,13 @@ function get_wznn_data($url = "https://api.dexscreener.com/latest/dex/pairs/ethe
 }
 
 $data = null;
+$cachedData = null;
 if (file_exists($cacheFile)) {
     $cache = json_decode(file_get_contents($cacheFile), true);
+
+    if ($cache && isset($cache['data'])) {
+        $cachedData = $cache['data'];
+    }
 
     if ($cache && isset($cache['timestamp']) && (time() - $cache['timestamp'] < $cacheDuration)) {
 
@@ -42,6 +47,7 @@ if ($data === null) {
     $apiData = get_wznn_data();
 
     if (isset($apiData["error"])) {
+        $data = $cachedData;
     } else {
         $data = $apiData;
 
