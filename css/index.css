@@ -12,12 +12,16 @@ body.homepage {
     text-align: center;
 }
 
-.logo {
-    display: block;
-    width: min(58vw, 440px);
-    height: auto;
+.logo-wrap {
+    width: clamp(160px, 35vw, 500px);
     margin: 0 auto;
     filter: drop-shadow(0 0 24px rgba(111, 243, 77, 0.26));
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .homepage-kicker {
@@ -41,7 +45,7 @@ body.homepage {
         padding-top: 5rem;
     }
 
-    .logo {
+    .logo-wrap {
         width: min(78vw, 320px);
     }
 }

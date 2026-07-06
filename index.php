@@ -73,7 +73,9 @@ require_once("wznn_data.php");
 
     <main class="homepage-hero">
         <div class="container">
-            <img class="logo" src="img/zenon.png" alt="Zenon Network logo">
+            <div class="logo-wrap">
+                <img class="logo" src="img/zn.svg" alt="ZN logo">
+            </div>
             <p class="homepage-kicker">Network of Momentum</p>
         </div>
     </main>
