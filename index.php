@@ -67,8 +67,10 @@ require_once("wznn_data.php");
         <li class="nav-item">
           <span class="nav-link navbar-price">
           <?php
-          if (isset($prices['wznn_weth'], $prices['wqsr_wznn'])) {
+          if (isset($prices['wznn_weth'])) {
             echo "ZNN &dollar;" . $prices['wznn_weth'] . "&nbsp;";
+          }
+          if (isset($prices['wqsr_wznn'])) {
             echo "QSR &dollar;" . $prices['wqsr_wznn'] . "&nbsp;";
           }
           ?>

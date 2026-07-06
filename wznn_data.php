@@ -11,6 +11,10 @@ $pairs = [
 ];
 
 function get_pair_data($url, $chain, $pair) {
+    if (!function_exists('curl_init')) {
+        return ["error" => "cURL is not available"];
+    }
+
     $fullUrl = implode('/', [$url, $chain, $pair]);
     $ch = curl_init($fullUrl);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -59,6 +63,8 @@ foreach ($pairs as $name => $address) {
                 "timestamp" => time(),
                 "data" => $apiData
             ];
+        } elseif (isset($cached['data']['priceUsd'])) {
+            $prices[$name] = $cached['data']['priceUsd'];
         }
     }
 }
