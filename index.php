@@ -18,10 +18,7 @@ require_once("wznn_data.php");
 
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.php" aria-label="Zenon Tools home">
-      <span class="brand-mark">Z</span>
-      <span class="brand-name">Zenon Tools</span>
-    </a>
+    <a class="navbar-brand" href="index.php">Zenon Tools</a>
 
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
@@ -55,17 +52,17 @@ require_once("wznn_data.php");
           </a>
 
           <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
-            <li><a class="dropdown-item" href="https://zenon.turmin.com/frontier-reward.php">Frontier reward</a></li>
-            <li><a class="dropdown-item" href="https://zenon.turmin.com/uncollected-rewards.php">Uncollected rewards</a></li>
-            <li><a class="dropdown-item" href="https://zenon.turmin.com/unwrap-token-requests.php">Unwrap token requests</a></li>
-            <li><a class="dropdown-item" href="https://zenon.turmin.com/liquidity-stake-entries.php">Liquidity stake entries</a></li>
-            <li><a class="dropdown-item" href="https://zenon.turmin.com/all-unwrap-token-requests.php">All unwrap token requests</a></li>
-            <li><a class="dropdown-item" href="https://zenon.turmin.com/all-unsigned-wrap-token-requests.php">All unsigned wrap token requests</a></li>
+            <li><a class="dropdown-item" href="frontier-reward.php">Frontier reward</a></li>
+            <li><a class="dropdown-item" href="uncollected-rewards.php">Uncollected rewards</a></li>
+            <li><a class="dropdown-item" href="unwrap-token-requests.php">Unwrap token requests</a></li>
+            <li><a class="dropdown-item" href="liquidity-stake-entries.php">Liquidity stake entries</a></li>
+            <li><a class="dropdown-item" href="all-unwrap-token-requests.php">All unwrap token requests</a></li>
+            <li><a class="dropdown-item" href="all-unsigned-wrap-token-requests.php">All unsigned wrap token requests</a></li>
           </ul>
         </li>
 
         <li class="nav-item">
-          <span class="nav-link price-pill"><?php if(isset($wznn_price_usd)) echo '&dollar;' . $wznn_price_usd; ?></span>
+          <span class="nav-link"><?php if(isset($wznn_price_usd)) echo '&dollar;' . $wznn_price_usd; ?></span>
         </li>
 
       </ul>
@@ -76,10 +73,10 @@ require_once("wznn_data.php");
 
     <main class="homepage-hero">
         <div class="container">
-            <a class="logo" href="https://zenon.network/" aria-label="Zenon Network">
-                <span>Z</span>
-                <span class="N">N</span>
-            </a>
+            <div class="logo" aria-label="Zenon Network logo">
+                <div>Z</div>
+                <div class="N">N</div>
+            </div>
             <p class="homepage-kicker">Network of Momentum</p>
         </div>
     </main>

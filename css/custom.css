@@ -1,7 +1,6 @@
 body {
     background-color: #151515;
     color: #fff;
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 h1 {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -140,36 +139,14 @@ header.custom-header {
 .navbar-custom .navbar-brand {
     display: inline-flex;
     align-items: center;
-    gap: 0.55rem;
     color: #000;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 0;
 }
 
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus {
     color: #000;
-}
-
-.brand-mark {
-    display: grid;
-    width: 2rem;
-    height: 2rem;
-    place-items: center;
-    border: 2px solid #000;
-    border-radius: 50%;
-    line-height: 1;
-    transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.navbar-brand:hover .brand-mark,
-.navbar-brand:focus .brand-mark {
-    box-shadow: 0 0 0 0.22rem rgba(0, 0, 0, 0.12);
-    transform: rotate(-10deg) scale(1.05);
-}
-
-.brand-name {
-    white-space: nowrap;
 }
 
 .navbar-custom .navbar-toggler {
@@ -185,8 +162,8 @@ header.custom-header {
 .navbar-custom .nav-link {
     position: relative;
     color: #000;
-    font-weight: 700;
-    border-radius: 999px;
+    font-weight: 500;
+    border-radius: 0.35rem;
     padding-inline: 0.85rem;
     transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
 }
@@ -216,36 +193,25 @@ header.custom-header {
     transform: scaleX(1);
 }
 
-.navbar-custom .price-pill {
-    background-color: #151515;
-    color: #6FF34D !important;
-    margin-left: 0.35rem;
-    padding-inline: 0.9rem;
-}
-
-.navbar-custom .price-pill::after {
-    display: none;
-}
-
 .navbar-custom .dropdown-menu {
-    background-color: #111;
-    border: 1px solid rgba(111, 243, 77, 0.34);
+    background-color: #6FF34D;
+    border: 0;
     border-radius: 0.5rem;
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.2);
     padding: 0.45rem;
     margin-top: 0.7rem;
 }
 
 .navbar-custom .dropdown-item {
-    color: #fff;
+    color: #000;
     border-radius: 0.35rem;
-    font-weight: 650;
+    font-weight: 500;
     transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 .navbar-custom .dropdown-item:hover,
 .navbar-custom .dropdown-item:focus,
 .navbar-custom .dropdown-item.active {
-    background-color: #6FF34D;
+    background-color: rgba(0, 0, 0, 0.12);
     color: #000;
     transform: translateX(0.18rem);
 }
@@ -275,7 +241,7 @@ header.custom-header {
     background-color: #151515;
     color: #fff;
     border: 0;
-    font-weight: 800;
+    font-weight: 600;
     min-height: 2.375rem;
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }

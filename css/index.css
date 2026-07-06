@@ -7,78 +7,35 @@ body.homepage {
 .homepage-hero {
     display: grid;
     min-height: 100vh;
-    padding: 6.5rem 0 2rem;
+    padding: 5rem 0 2rem;
     place-items: center;
     text-align: center;
 }
 
 .logo {
-    position: relative;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    isolation: isolate;
     font-family: Arial, sans-serif;
-    font-size: clamp(8rem, 28vw, 25rem);
-    font-weight: 900;
-    line-height: 0.68;
+    font-size: 20vw;
+    font-weight: bold;
     color: #6FF34D;
-    text-decoration: none;
-    transform: scaleY(0.72);
-    text-shadow:
-        0 0 18px rgba(111, 243, 77, 0.5),
-        0 0 48px rgba(72, 214, 255, 0.18);
-    transition: transform 220ms ease, filter 220ms ease;
-}
-
-.logo::before {
-    content: "";
-    position: absolute;
-    inset: 8% -14% 9%;
-    z-index: -1;
-    border: 2px solid rgba(111, 243, 77, 0.38);
-    border-radius: 999px;
-    box-shadow:
-        inset 0 0 34px rgba(111, 243, 77, 0.12),
-        0 0 58px rgba(72, 214, 255, 0.14);
-    transform: rotate(-18deg) scaleX(0.92);
-}
-
-.logo::after {
-    content: "";
-    position: absolute;
-    inset: 15% -8% 17%;
-    z-index: -1;
-    background:
-        repeating-linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.12) 0,
-            rgba(255, 255, 255, 0.12) 1px,
-            transparent 1px,
-            transparent 18px
-        );
-    opacity: 0.24;
-    transform: skewY(-12deg);
-}
-
-.logo:hover,
-.logo:focus-visible {
-    color: #7dff61;
-    filter: saturate(1.2);
-    transform: scaleY(0.72) translateY(-0.35rem);
+    line-height: 0.71;
+    transform: scaleY(0.7);
+    text-shadow: 0 0 24px rgba(111, 243, 77, 0.28);
 }
 
 .N {
-    font-size: 1.03em;
+    font-size: 20.5vw;
     position: relative;
     left: -0.02vw;
 }
 
 .homepage-kicker {
-    margin: -2.5rem 0 0;
+    margin: -2rem 0 0;
     color: rgba(255, 255, 255, 0.72);
     font-size: clamp(0.85rem, 2.8vw, 1.1rem);
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0;
     text-transform: uppercase;
 }
