@@ -65,7 +65,7 @@ require_once("wznn_data.php");
         </li>
 
         <li class="nav-item">
-          <span class="nav-link price-value"><?php if(isset($wznn_price_usd)) echo 'wZNN &dollar;' . $wznn_price_usd; ?></span>
+          <span class="nav-link price-value"><?php if(isset($wznn_price_usd)) echo '&dollar;' . $wznn_price_usd; ?></span>
         </li>
 
       </ul>
