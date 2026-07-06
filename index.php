@@ -7,18 +7,21 @@ require_once("wznn_data.php");
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link href="https://zenon.turmin.com/lib/bootstrap@5.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://zenon.turmin.com/css/index.css" rel="stylesheet">
-    <link href="https://zenon.turmin.com/css/custom.css" rel="stylesheet">
+    <link href="lib/bootstrap@5.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenon Network &bull; Network of Momentum</title>
 </head>
-<body>
+<body class="homepage">
 
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#"></a>
+    <a class="navbar-brand" href="index.php" aria-label="Zenon Tools home">
+      <span class="brand-mark">Z</span>
+      <span class="brand-name">Zenon Tools</span>
+    </a>
 
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
@@ -30,7 +33,7 @@ require_once("wznn_data.php");
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-lg-auto align-items-lg-center">
 
         <li class="nav-item">
           <a class="nav-link" href="https://zenon.network/">Zenon Network</a>
@@ -62,7 +65,7 @@ require_once("wznn_data.php");
         </li>
 
         <li class="nav-item">
-          <span class="nav-link"><?php if(isset($wznn_price_usd)) echo '&dollar;' . $wznn_price_usd; ?></span>
+          <span class="nav-link price-pill"><?php if(isset($wznn_price_usd)) echo '&dollar;' . $wznn_price_usd; ?></span>
         </li>
 
       </ul>
@@ -71,12 +74,15 @@ require_once("wznn_data.php");
 </nav>
 
 
-    <div class="container">
-        <div class="logo">
-            <div>Z</div>
-            <div class="N">N</div>
+    <main class="homepage-hero">
+        <div class="container">
+            <a class="logo" href="https://zenon.network/" aria-label="Zenon Network">
+                <span>Z</span>
+                <span class="N">N</span>
+            </a>
+            <p class="homepage-kicker">Network of Momentum</p>
         </div>
-    </div>
+    </main>
 
 <script src="lib/bootstrap@5.3.6/js/bootstrap.bundle.min.js"></script>
 

@@ -77,9 +77,13 @@ if (!empty($_GET['height'])) {
 </head>
 <body>
 
-<header class="py-3 custom-header">
-  <div class="container">
-    <form method="GET" class="d-flex" id="searchForm">
+<header class="py-3 custom-header tool-header">
+  <div class="container tool-header-inner">
+    <a class="btn home-btn" href="index.php" aria-label="Home">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <form method="GET" class="tool-search-form" id="searchForm">
       <input type="search" name="height" class="form-control custom-input" placeholder="Height" aria-label="Search" value="<?php echo isset($_GET['height']) ? htmlspecialchars($_GET['height']) : ''; ?>">
         &nbsp;
       <!-- <input type="search" name="count" class="form-control custom-input" placeholder="Count" aria-label="Search" value="<?php echo isset($_GET['count']) ? htmlspecialchars($_GET['count']) : ''; ?>"> -->

@@ -19,27 +19,32 @@ jobs:
 
       - name: Prepare deploy folder
         run: |
-          rm -rf .deploy
-          mkdir -p .deploy
+          DEPLOY_DIR="$RUNNER_TEMP/deploy"
 
-          rsync -av \
-            --include='*/' \
-            --include='*.php' \
-            --include='*.html' \
-            --include='*.css' \
-            --include='*.js' \
-            --include='*.json' \
-            --include='*.png' \
-            --include='*.jpg' \
-            --include='*.jpeg' \
-            --include='*.gif' \
-            --include='*.svg' \
-            --include='*.ico' \
-            --include='*.webp' \
-            --include='*.otf' \
-            --include='*.webmanifest' \
-            --exclude='*' \
-            ./ .deploy/
+          rm -rf "$DEPLOY_DIR"
+          mkdir -p "$DEPLOY_DIR"
+
+          find . -type f \( \
+            -iname '*.php' -o \
+            -iname '*.html' -o \
+            -iname '*.css' -o \
+            -iname '*.js' -o \
+            -iname '*.json' -o \
+            -iname '*.png' -o \
+            -iname '*.jpg' -o \
+            -iname '*.jpeg' -o \
+            -iname '*.gif' -o \
+            -iname '*.svg' -o \
+            -iname '*.ico' -o \
+            -iname '*.webp' -o \
+            -iname '*.otf' -o \
+            -iname '*.webmanifest' \
+          \) -print0 | rsync -av --from0 --files-from=- ./ "$DEPLOY_DIR/"
+
+      - name: Show deploy contents
+        run: |
+          echo "Deploy folder contents:"
+          find "$RUNNER_TEMP/deploy" -maxdepth 4 -print | sort
 
       - name: Install lftp
         run: |
@@ -49,7 +54,7 @@ jobs:
       - name: Prepare SSH key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SFTP_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          printf '%s\n' "${{ secrets.SFTP_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -p "${{ secrets.SFTP_PORT }}" "${{ secrets.SFTP_SERVER }}" >> ~/.ssh/known_hosts
 
@@ -57,6 +62,6 @@ jobs:
         run: |
           lftp -u "${{ secrets.SFTP_USERNAME }}," sftp://${{ secrets.SFTP_SERVER }}:${{ secrets.SFTP_PORT }} <<EOF
           set sftp:connect-program "ssh -a -x -i ~/.ssh/deploy_key"
-          mirror -R ./.deploy ${{ secrets.SFTP_REMOTE_DIR }}
+          mirror -R "$RUNNER_TEMP/deploy/" "${{ secrets.SFTP_REMOTE_DIR }}/"
           bye
           EOF

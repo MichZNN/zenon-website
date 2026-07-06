@@ -70,9 +70,13 @@ if (!empty($_GET['address'])) {
 </head>
 <body>
 
-<header class="py-3 custom-header">
-  <div class="container">
-    <form method="GET" class="d-flex" id="searchForm">
+<header class="py-3 custom-header tool-header">
+  <div class="container tool-header-inner">
+    <a class="btn home-btn" href="index.php" aria-label="Home">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <form method="GET" class="tool-search-form" id="searchForm">
       <input type="search" name="address" class="form-control custom-input" placeholder="Type address" aria-label="Search" value="<?php echo isset($_GET['address']) ? htmlspecialchars($_GET['address']) : ''; ?>">
       
       <select name="per_page" class="form-select ms-2 w-auto custom-select custom-select-per-page" onchange="this.form.submit();">

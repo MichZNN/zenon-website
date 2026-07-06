@@ -152,8 +152,12 @@ if (isset($data_array['title'])) {
 </head>
 <body>
 
-<header class="py-3 custom-header">
-  <div class="container">
+<header class="py-3 custom-header tool-header">
+  <div class="container tool-header-inner">
+    <a class="btn home-btn" href="index.php" aria-label="Home">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
   </div>
 </header>
 
