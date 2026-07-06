@@ -146,12 +146,12 @@ header.custom-header {
 }
 
 .navbar-custom {
-    min-height: 4.25rem;
+    min-height: 4.4rem;
     --bs-navbar-padding-y: 0;
 }
 
 .navbar-custom > .container {
-    min-height: 4.25rem;
+    min-height: 4.4rem;
 }
 
 .navbar-custom .navbar-brand:hover,

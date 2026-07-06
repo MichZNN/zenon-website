@@ -13,7 +13,7 @@ body.homepage {
 }
 
 .logo-wrap {
-    width: clamp(210px, calc(48vmin - 10px), 670px);
+    width: clamp(210px, 46vmin, 650px);
     margin: 0 auto;
     filter: drop-shadow(0 0 24px rgba(111, 243, 77, 0.26));
 }

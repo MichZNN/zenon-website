@@ -64,4 +64,10 @@ foreach ($pairs as $name => $address) {
 }
 
 // Cache
-file_put_contents($cacheFile, json_encode($cache, JSON_PRETTY_PRINT));
+$cacheDir = dirname($cacheFile);
+if (
+    is_writable($cacheDir) &&
+    (!file_exists($cacheFile) || is_writable($cacheFile))
+) {
+    file_put_contents($cacheFile, json_encode($cache, JSON_PRETTY_PRINT));
+}
