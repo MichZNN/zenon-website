@@ -1,1 +1,14 @@
-{"timestamp":1750150758,"data":{"priceUsd":"0.4796"}}
+{
+    "wznn_weth": {
+        "timestamp": 1783252251,
+        "data": {
+            "priceUsd": "0.1202"
+        }
+    },
+    "wqsr_wznn": {
+        "timestamp": 1778885267,
+        "data": {
+            "priceUsd": "0.02246"
+        }
+    }
+}
