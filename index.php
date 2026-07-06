@@ -1,6 +1,3 @@
-<?php
-require_once("wznn_data.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,16 +62,7 @@ require_once("wznn_data.php");
         </li>
 
         <li class="nav-item">
-          <span class="nav-link navbar-price">
-          <?php
-          if (isset($prices['wznn_weth'])) {
-            echo "ZNN &dollar;" . $prices['wznn_weth'] . "&nbsp;";
-          }
-          if (isset($prices['wqsr_wznn'])) {
-            echo "QSR &dollar;" . $prices['wqsr_wznn'] . "&nbsp;";
-          }
-          ?>
-          </span>
+          <span class="nav-link navbar-price" id="navbarPrices"></span>
         </li>
 
       </ul>
@@ -92,6 +80,24 @@ require_once("wznn_data.php");
         </div>
     </main>
 
+<script>
+const navbarPrices = document.getElementById('navbarPrices');
+if (navbarPrices) {
+    fetch('api/prices.php')
+        .then(response => response.ok ? response.json() : null)
+        .then(payload => {
+            if (!payload || !Array.isArray(payload.data)) {
+                return;
+            }
+
+            navbarPrices.textContent = payload.data
+                .filter(item => item.symbol && item.price)
+                .map(item => `${item.symbol} $${item.price}`)
+                .join(' ');
+        })
+        .catch(() => {});
+}
+</script>
 <script src="lib/bootstrap@5.3.6/js/bootstrap.bundle.min.js"></script>
 
 </body>
